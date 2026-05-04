@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Tech Store</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+
+
+<header>
+    <img src="/Images/logo.png" alt="Logo" class="logo">
+    <h1>Campus Tech Store</h1>
+    <p>Your one-stop shop for student tech needs</p>
+</header>
+
+
+<nav>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#offers">Offers</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+
+
+<main>
+
+<section id="home">
+    <h2>Welcome</h2>
+    <p>Welcome to Campus Tech Store!</p>
+    <img src="/Images/hero.jpg" alt="Hero Image" class="hero">
+
+    <button onclick="showWelcome()">Click for Welcome</button>
+    <p id="welcomeMsg"></p>
+</section>
+
+
+<section id="products">
+    <h2>Products</h2>
+
+    <input type="text" id="search" placeholder="Search products..." onkeyup="searchProduct()">
+
+    <table id="productTable">
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>Laptop</td>
+            <td>High performance laptop</td>
+            <td>Rs. 185000</td>
+        </tr>
+        <tr>
+            <td>Headphones</td>
+            <td>Noise cancelling</td>
+            <td>Rs. 8500</td>
+        </tr>
+        <tr>
+            <td>Mouse</td>
+            <td>Wireless mouse</td>
+            <td>Rs. 3000</td>
+        </tr>
+    </table>
+
+    <button onclick="applyDiscount()">Get Discount</button>
+    <p id="discountMsg"></p>
+</section>
+
+
+<section id="offers">
+    <h2>Student Offers</h2>
+    <ol>
+        <li>10% off laptops</li>
+        <li>Buy 1 Get 1 Free accessories</li>
+        <li>Free delivery</li>
+    </ol>
+</section>
+
+
+<section id="contact">
+    <h2>Contact Us</h2>
+
+    <form onsubmit="return validateForm()">
+        <input type="text" id="name" placeholder="Name"><br>
+        <input type="text" id="email" placeholder="Email"><br>
+        <textarea id="message" placeholder="Message"></textarea><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <p id="formMsg"></p>
+</section>
+
+</main>
+
+<!-- Dark Mode -->
+<button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+
+<footer>
+    <p>&copy; 2026 Campus Tech Store</p>
+</footer>
+
+<script src="/js/script.js"></script>
+</body>
+</html>
